@@ -1,0 +1,29 @@
+{
+  "name": "agentsoncloud-backend",
+  "version": "1.0.0",
+  "description": "This is the backend repository for Agents on Cloud company - Technical Assesment",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "node index.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/zaidalshibi/AgentsOnCloud-Backend.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/zaidalshibi/AgentsOnCloud-Backend/issues"
+  },
+  "homepage": "https://github.com/zaidalshibi/AgentsOnCloud-Backend#readme",
+  "dependencies": {
+    "bcrypt": "^5.0.1",
+    "cors": "^2.8.5",
+    "dotenv": "^16.0.2",
+    "express": "^4.18.1",
+    "pg": "^8.8.0",
+    "sequelize": "^6.23.0"
+  }
+}
