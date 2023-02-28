@@ -34,8 +34,8 @@ itemModel.belongsTo( userModel, { foreignKey: 'ownerID', targetKey: 'id' } );
 itemModel.hasMany( commentModel, { foreignKey: 'itemID', sourceKey: 'id' } );
 commentModel.belongsTo( itemModel, { foreignKey: 'itemID', targetKey: 'id' } );
 
-userModel.hasMany( commentModel, { foreignKey: 'userID', sourceKey: 'id' } );
-commentModel.belongsTo( userModel, { foreignKey: 'userID', targetKey: 'id' } );
+userModel.hasMany( commentModel, { foreignKey: 'ownerID', sourceKey: 'id' } );
+commentModel.belongsTo( userModel, { foreignKey: 'ownerID', targetKey: 'id' } );
 
 
 

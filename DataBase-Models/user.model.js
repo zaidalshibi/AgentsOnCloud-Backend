@@ -1,5 +1,7 @@
 'use strict';
 
+const jwt = require( 'jsonwebtoken' );
+
 const User = ( sequelize, DataTypes ) => sequelize.define( 'User', {
     username: {
         type: DataTypes.STRING,
@@ -20,6 +22,19 @@ const User = ( sequelize, DataTypes ) => sequelize.define( 'User', {
     lastName: {
         type: DataTypes.STRING,
         allowNull: false
+    },
+    token: {
+        type: DataTypes.VIRTUAL,
+        get () {
+            return jwt.sign( 
+                { username: this.username }, 
+                process.env.JWT_SECRET,
+                { expiresIn: '1h' }
+                );
+        },
+        set ( value ) {
+            throw new Error( 'Do not try to set the `token` value!' );
+        }
     }
 } );
 

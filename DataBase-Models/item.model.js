@@ -7,15 +7,15 @@ const Item = ( sequelize, DataTypes ) => sequelize.define( 'Item', {
     },
     description: {
         type: DataTypes.STRING,
-        allowNull: false
+        defaultValue: 'No description'
     },
     price: {
         type: DataTypes.INTEGER,
-        allowNull: false
+        defaultValue: 15
     },
     image: {
         type: DataTypes.STRING,
-        allowNull: false
+        defaultValue: 'https://via.placeholder.com/150/FFFFFF/000000?text=AgentsOnCloud'
     },
     ownerID: {
         type: DataTypes.INTEGER,

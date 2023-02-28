@@ -2,10 +2,16 @@
 
 const express = require( 'express' );
 const cors = require( 'cors' );
+const userRouter = require( './Routes/user.route' );
+const itemRouter = require( './Routes/item.route' );
+const commentRouter = require( './Routes/comment.route' );
 const app = express();
 
 app.use( cors() );
 app.use( express.json() );
+app.use( userRouter );
+app.use( itemRouter );
+app.use( commentRouter );
 
 app.get( '/', ( req, res ) => {
     res.status( 200 ).json( {
