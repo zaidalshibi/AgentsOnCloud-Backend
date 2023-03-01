@@ -23,6 +23,10 @@ const User = ( sequelize, DataTypes ) => sequelize.define( 'User', {
         type: DataTypes.STRING,
         allowNull: false
     },
+    // favoriteItems: {
+    //     type: DataTypes.ARRAY( DataTypes.INTEGER ),
+    //     allowNull: true
+    // },
     token: {
         type: DataTypes.VIRTUAL,
         get () {

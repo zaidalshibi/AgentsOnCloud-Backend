@@ -32,7 +32,16 @@ const login = async ( req, res ) => {
     }
 };
 
+// const favorite = ( req, res ) => {
+//     const { id } = req.user;
+//     const { favoriteItems } = req.body;
+//     User.update( { favoriteItems }, { where: { id } } )
+//         .then( user => res.status( 200 ).json( user ) )
+//         .catch( err => res.status( 400 ).json( err ) );
+// };
+
 module.exports = {
     signup,
-    login
+    login,
+    // favorite
 };

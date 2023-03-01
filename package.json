@@ -15,7 +15,7 @@
   },
   "homepage": "https://github.com/zaidalshibi/AgentsOnCloud-Backend#readme",
   "scripts": {
-    "start": "node server.js"
+    "start": "node index.js"
   },
   "dependencies": {
     "base-64": "^1.0.0",
